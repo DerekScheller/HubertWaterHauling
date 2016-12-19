@@ -69,8 +69,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Bills\BillBase.cs" />
     <Compile Include="Models\Bills\Payable\GasReciept.cs" />
+    <Compile Include="Models\ContactInfo.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\HWHBase.cs" />

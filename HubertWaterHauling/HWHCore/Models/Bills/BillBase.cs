@@ -8,5 +8,7 @@ namespace HWHCore.Models
 {
     public class BillBase : HWHBase
     {
+        public float Amount { get; set; }
+
     }
 }
