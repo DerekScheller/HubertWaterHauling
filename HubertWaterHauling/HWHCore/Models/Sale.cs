@@ -11,9 +11,11 @@ namespace HWHCore.Models
         public SaleType SaleType { get; set; }
         public float AmountGross { get; set; }
         public DateTime DateOfSale { get; set; }
-        public DateTime DateOfPayment { get; set; }
+        public bool FullPaymentRecieved { get; set; }
         public float PriceOfWater { get; set; }
-
+        public int NumberOfLoads { get; set; }
+        public List<Payment> Payments { get; set; }
+        public List<BillBase> Bills { get; set; }
     }
 
     public enum SaleType
