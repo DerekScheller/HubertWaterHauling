@@ -92,24 +92,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201612190503297_Initial.cs" />
-    <Compile Include="Migrations\201612190503297_Initial.Designer.cs">
-      <DependentUpon>201612190503297_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612190506447_KeyUpdate.cs" />
-    <Compile Include="Migrations\201612190506447_KeyUpdate.Designer.cs">
-      <DependentUpon>201612190506447_KeyUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\201612300529019_Initial.cs" />
+    <Compile Include="Migrations\201612300529019_Initial.Designer.cs">
+      <DependentUpon>201612300529019_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\HumanBase.cs" />
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\Bills\BillBase.cs" />
-    <Compile Include="Models\Bills\Payable\GasReciept.cs" />
+    <Compile Include="Models\GasReciept.cs" />
     <Compile Include="Models\ContactInfo.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\HWHBase.cs" />
-    <Compile Include="Models\HWHContext.cs" />
+    <Compile Include="HWHContext.cs" />
     <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\LoadOfWater.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\WaterTruck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -125,11 +123,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201612190503297_Initial.resx">
-      <DependentUpon>201612190503297_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612190506447_KeyUpdate.resx">
-      <DependentUpon>201612190506447_KeyUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612300529019_Initial.resx">
+      <DependentUpon>201612300529019_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,9 +140,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Bills\Recievable\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

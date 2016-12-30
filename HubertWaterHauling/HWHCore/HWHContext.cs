@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HWHCore.Models.Bills.Payable;
+﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using HWHCore.Models;
 
-namespace HWHCore.Models
+
+namespace HWHCore
 {
     public class HWHContext : DbContext
     {
@@ -18,6 +15,14 @@ namespace HWHCore.Models
         public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<ContactInfo> ContactInfos { get; set; }
         public virtual DbSet<GasReciept> GasReciepts { get; set; }
+        public virtual DbSet<Bill> Bills { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+        }
     }
 }

@@ -7,10 +7,24 @@ using System.Threading.Tasks;
 
 namespace HWHCore.Models
 {
-    public class HWHBase
+    public abstract class HWHBase
     {
         [Key]
         public int Id { get; set; }
+        [Required]
+        public DateTime CreatedDateTime { get; set; }
+        [Required]
+        public DateTime ModifiedDateTime { get; set; }
 
+        protected HWHBase()
+        {
+            ModifiedDateTime = DateTime.Now;
+            CreatedDateTime = DateTime.Now;
+        }
+    }
+    public enum CustEmp
+    {
+        Customer,
+        Employee
     }
 }

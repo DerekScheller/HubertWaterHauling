@@ -9,7 +9,6 @@ C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWa
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\bin\Debug\EntityFramework.xml
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\bin\Debug\System.Data.SQLite.xml
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.csprojResolveAssemblyReference.cache
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\MainWindow.g.cs
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\App.g.cs
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore_MarkupCompile.cache
@@ -21,4 +20,3 @@ C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWa
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.exe
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.pdb
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.Initial.resources
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.KeyUpdate.resources

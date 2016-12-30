@@ -1,4 +1,6 @@
-﻿namespace HWHCore.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace HWHCore.Models
 {
     public class Address : HWHBase
     {
@@ -10,6 +12,8 @@
         public string Zip { get; set; }
         public string Country { get; set; }
         public AddressType AddressType { get; set; }
+        public CustEmp CustEmpDistinction { get; set; }
+        public int ContactId { get; set; }
     }
 
     public enum AddressType

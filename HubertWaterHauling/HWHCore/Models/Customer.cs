@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 
 namespace HWHCore.Models
 {
-    public class Customer : HWHBase
+    public class Customer : HumanBase
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string MiddleInitial { get; set; }
-        public List<ContactInfo> ContactInfos { get; set; }
-        public List<Address> Addresses { get; set; }
-        public string Notes { get; set; }
+        public virtual List<Payment> Payments { get; set; }
+        public string Description { get; set; }
     }
 }

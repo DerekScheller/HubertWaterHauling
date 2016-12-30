@@ -13,7 +13,7 @@ namespace HWHCore.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201612190503297_Initial"; }
+            get { return "201612300529019_Initial"; }
         }
         
         string IMigrationMetadata.Source
