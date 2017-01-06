@@ -24,5 +24,26 @@ namespace HWHCore
         {
             InitializeComponent();
         }
+
+        private void CompanyDataEditButton_Click(object sender, RoutedEventArgs e)
+        {
+            var comp = new CompanyDataLanding();
+            comp.Show();
+            this.Close();
+        }
+
+        private void DataEntryButton_Click(object sender, RoutedEventArgs e)
+        {
+            var acct = new AccountingLanding();
+            acct.Show();
+            this.Close();
+        }
+
+        private void ReportsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var reps = new ReportsLanding();
+            reps.Show();
+            this.Close();
+        }
     }
 }

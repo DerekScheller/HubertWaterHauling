@@ -20,3 +20,11 @@ C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWa
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.exe
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.pdb
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.Initial.resources
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.csprojResolveAssemblyReference.cache
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\AccountingLanding.g.cs
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CompanyDataLanding.g.cs
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\ReportsLanding.g.cs
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\AccountingLanding.baml
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CompanyDataLanding.baml
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\ReportsLanding.baml
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.TruckUpdate.resources

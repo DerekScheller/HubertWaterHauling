@@ -1,0 +1,50 @@
+﻿<Window x:Class="HWHCore.AccountingLanding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HWHCore"
+        mc:Ignorable="d"
+        Title="AccountingLanding" Height="300" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="AccountingTabs" HorizontalAlignment="Left" Height="270" VerticalAlignment="Top" Width="594" Margin="0,0,-0.4,0" Grid.ColumnSpan="2">
+            <TabItem Header="Sales">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="SalesListBox" HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="137" Margin="0,24,0,0"/>
+                    <Label x:Name="SelectSaleLabel" Content="Select Sales" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="87"/>
+                    <ComboBox x:Name="SelectCustomerCombo" HorizontalAlignment="Left" Margin="137,24,0,0" VerticalAlignment="Top" Width="106"/>
+                    <ComboBox x:Name="SelectDriverCombo" HorizontalAlignment="Left" Margin="248,24,0,0" VerticalAlignment="Top" Width="86"/>
+                    <ComboBox x:Name="SelectYearCombo" HorizontalAlignment="Left" Margin="339,24,0,0" VerticalAlignment="Top" Width="77"/>
+                    <Label x:Name="SelectCustLabel" Content="Select a Customer" HorizontalAlignment="Left" Margin="137,0,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="SelectDriverLabel" Content="Select a Driver" HorizontalAlignment="Left" Margin="248,0,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="SelectYearLabel" Content="Select a Year" HorizontalAlignment="Left" Margin="339,0,0,0" VerticalAlignment="Top"/>
+                    <ListBox x:Name="PaymentsList" HorizontalAlignment="Left" Height="108" Margin="478,96,0,0" VerticalAlignment="Top" Width="104"/>
+                    <Label x:Name="PaymentsLabel" Content="Current Payments" HorizontalAlignment="Left" Margin="476,69,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="CreateSaleButton" Content="Create New Sale" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="117"/>
+                    <Button x:Name="CreatePaymentButton" Content="Add New Payment" HorizontalAlignment="Left" Margin="480,209,0,0" VerticalAlignment="Top" Width="102" Height="28"/>
+                    <Label x:Name="SelectSaleType" Content="Type of Sale" HorizontalAlignment="Left" Margin="421,0,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="SaleTypeCombo" HorizontalAlignment="Left" Margin="421,24,0,0" VerticalAlignment="Top" Width="77"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Gas Reciepts">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox x:Name="SelectDriverGsCombo" HorizontalAlignment="Left" Margin="122,26,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="SelectTruckGsCombo" HorizontalAlignment="Left" Margin="257,26,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ListBox x:Name="SelectGsList" HorizontalAlignment="Left" Height="216" Margin="0,26,0,0" VerticalAlignment="Top" Width="117"/>
+                    <Label x:Name="SelectGasReceiptsLabel" Content="Select Gas Receipts" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="SelectMonthGsCombo" HorizontalAlignment="Left" Margin="392,26,0,0" VerticalAlignment="Top" Width="80"/>
+                    <Label x:Name="SelectDriverGsLabel" Content="Select Driver" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="SelectTruckGsLabel" Content="Select Truck" HorizontalAlignment="Left" Margin="277,0,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="SelectMonthGs" Content="Select Month" HorizontalAlignment="Left" Margin="392,0,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="SelectYearGs" Content="Select Year" HorizontalAlignment="Left" Margin="487,0,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="SelectYearGsCombo" HorizontalAlignment="Left" Margin="487,26,0,0" VerticalAlignment="Top" Width="80"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

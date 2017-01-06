@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HWHCore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600">
-    <Grid>
-
+        Title="MainWindow" Height="400" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid Margin="0,0,3.6,0">
+        <Button x:Name="ReportsButton" Content="REPORTS" HorizontalAlignment="Left" Margin="200,68,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.461,0.51" Height="300" Click="ReportsButton_Click"/>
+        <Button x:Name="DataEntryButton" Content="INPUT ACCOUNTING DATA" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Width="200" Height="300" Click="DataEntryButton_Click"/>
+        <Button x:Name="CompanyDataEditButton" Content="INPUT COMPANY &#xA;RELATED INFORMATION" HorizontalAlignment="Left" Margin="400,68,-10,0" VerticalAlignment="Top" Width="200" Height="300" Click="CompanyDataEditButton_Click"/>
+        <Label x:Name="CompanyName" Content="Hubert Water Hauling" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="53" Width="295"/>
+        <Label x:Name="label" Content="Dynamic Accounting Solution" HorizontalAlignment="Left" Margin="180,20,0,0" VerticalAlignment="Top" Height="43" Width="320"/>
     </Grid>
 </Window>

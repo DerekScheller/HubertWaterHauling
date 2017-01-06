@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\App.xaml
-11151548125
+6-1196552452
 
-251057466963
+321985409176
 19-685613726
-MainWindow.xaml;
+AccountingLanding.xaml;CompanyDataLanding.xaml;CreateNewSale.xaml;CreatePayment.xaml;MainWindow.xaml;ReportsLanding.xaml;
 
 False
 

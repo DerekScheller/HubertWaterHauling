@@ -78,18 +78,57 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateNewSale.xaml.cs">
+      <DependentUpon>CreateNewSale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePayment.xaml.cs">
+      <DependentUpon>CreatePayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701040606445_TruckUpdate.cs" />
+    <Compile Include="Migrations\201701040606445_TruckUpdate.Designer.cs">
+      <DependentUpon>201701040606445_TruckUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsLanding.xaml.cs">
+      <DependentUpon>ReportsLanding.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AccountingLanding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompanyDataLanding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateNewSale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreatePayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AccountingLanding.xaml.cs">
+      <DependentUpon>AccountingLanding.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CompanyDataLanding.xaml.cs">
+      <DependentUpon>CompanyDataLanding.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ReportsLanding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\201612300529019_Initial.cs" />
@@ -125,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201612300529019_Initial.resx">
       <DependentUpon>201612300529019_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701040606445_TruckUpdate.resx">
+      <DependentUpon>201701040606445_TruckUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

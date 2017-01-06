@@ -9,7 +9,9 @@ namespace HWHCore.Models
         public DateTime ManufactureYear { get; set; }
         public DateTime? PurchaseDate { get; set; }
         public string Model { get; set; }
+        public string Make { get; set; }
         public int LoadVolume { get; set; }
         public virtual List<GasReciept> GasReciepts { get; set; }
+
     }
 }
