@@ -22,9 +22,4 @@ namespace HWHCore.Models
             CreatedDateTime = DateTime.Now;
         }
     }
-    public enum CustEmp
-    {
-        Customer,
-        Employee
-    }
 }

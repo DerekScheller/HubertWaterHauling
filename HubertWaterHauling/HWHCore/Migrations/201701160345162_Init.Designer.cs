@@ -7,13 +7,13 @@ namespace HWHCore.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class TruckUpdate : IMigrationMetadata
+    public sealed partial class Init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(TruckUpdate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701040606445_TruckUpdate"; }
+            get { return "201701160345162_Init"; }
         }
         
         string IMigrationMetadata.Source

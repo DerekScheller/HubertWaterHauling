@@ -8,8 +8,12 @@ namespace HWHCore.Models
         public AssociationType AssociationType { get; set; }
         public string Notes { get; set; }
         public string ContactDetail { get; set; }
-        public CustEmp CustEmpDistinction { get; set; }
-        public int ContactId { get; set; }      
+        public int? EmployeeId { get; set; }
+        public int? CustomerId { get; set; }
+        [ForeignKey(nameof(CustomerId))]
+        public Customer Customer { get; set; }
+        [ForeignKey(nameof(EmployeeId))]
+        public Employee Employee { get; set; }
     }
 
     public enum AssociationType

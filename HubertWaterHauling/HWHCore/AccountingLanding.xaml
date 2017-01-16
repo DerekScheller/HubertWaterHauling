@@ -14,20 +14,18 @@
         <TabControl x:Name="AccountingTabs" HorizontalAlignment="Left" Height="270" VerticalAlignment="Top" Width="594" Margin="0,0,-0.4,0" Grid.ColumnSpan="2">
             <TabItem Header="Sales">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="SalesListBox" HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="137" Margin="0,24,0,0"/>
-                    <Label x:Name="SelectSaleLabel" Content="Select Sales" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="87"/>
-                    <ComboBox x:Name="SelectCustomerCombo" HorizontalAlignment="Left" Margin="137,24,0,0" VerticalAlignment="Top" Width="106"/>
-                    <ComboBox x:Name="SelectDriverCombo" HorizontalAlignment="Left" Margin="248,24,0,0" VerticalAlignment="Top" Width="86"/>
-                    <ComboBox x:Name="SelectYearCombo" HorizontalAlignment="Left" Margin="339,24,0,0" VerticalAlignment="Top" Width="77"/>
-                    <Label x:Name="SelectCustLabel" Content="Select a Customer" HorizontalAlignment="Left" Margin="137,0,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="SelectDriverLabel" Content="Select a Driver" HorizontalAlignment="Left" Margin="248,0,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="SelectYearLabel" Content="Select a Year" HorizontalAlignment="Left" Margin="339,0,0,0" VerticalAlignment="Top"/>
+                    <ListBox x:Name="SalesListBox" HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="137" Margin="0,103,0,0"/>
+                    <Label x:Name="SelectSaleLabel" Content="Select Sales" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Width="87" Margin="0,69,0,0"/>
                     <ListBox x:Name="PaymentsList" HorizontalAlignment="Left" Height="108" Margin="478,96,0,0" VerticalAlignment="Top" Width="104"/>
                     <Label x:Name="PaymentsLabel" Content="Current Payments" HorizontalAlignment="Left" Margin="476,69,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="CreateSaleButton" Content="Create New Sale" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="117"/>
+                    <Button x:Name="CreateSaleButton" Content="Create New Sale" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="117" Height="28"/>
                     <Button x:Name="CreatePaymentButton" Content="Add New Payment" HorizontalAlignment="Left" Margin="480,209,0,0" VerticalAlignment="Top" Width="102" Height="28"/>
-                    <Label x:Name="SelectSaleType" Content="Type of Sale" HorizontalAlignment="Left" Margin="421,0,0,0" VerticalAlignment="Top"/>
-                    <ComboBox x:Name="SaleTypeCombo" HorizontalAlignment="Left" Margin="421,24,0,0" VerticalAlignment="Top" Width="77"/>
+                    <TextBox x:Name="VolumePerLoadField" HorizontalAlignment="Left" Height="23" Margin="339,181,0,0" TextWrapping="Wrap" Text="Load Volume" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="NumberOfLoadsField" HorizontalAlignment="Left" Height="23" Margin="339,134,0,0" TextWrapping="Wrap" Text="# Of Loads" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="PriceOfWaterField" HorizontalAlignment="Left" Height="23" Margin="167,181,0,0" TextWrapping="Wrap" Text="Price Of Water " VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="DriverRetainageField" HorizontalAlignment="Left" Height="23" Margin="167,134,0,0" TextWrapping="Wrap" Text="Driver Retainage %" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="UpdateSaleButton" Content="Update Current Sale" HorizontalAlignment="Left" Margin="248,209,0,0" VerticalAlignment="Top" Width="129" Height="28" />
+                    <DatePicker x:Name="DateOfSale" HorizontalAlignment="Left" Margin="167,79,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Gas Reciepts">

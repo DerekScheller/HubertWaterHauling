@@ -84,9 +84,9 @@
     <Compile Include="CreatePayment.xaml.cs">
       <DependentUpon>CreatePayment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701040606445_TruckUpdate.cs" />
-    <Compile Include="Migrations\201701040606445_TruckUpdate.Designer.cs">
-      <DependentUpon>201701040606445_TruckUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\201701160345162_Init.cs" />
+    <Compile Include="Migrations\201701160345162_Init.Designer.cs">
+      <DependentUpon>201701160345162_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportsLanding.xaml.cs">
       <DependentUpon>ReportsLanding.xaml</DependentUpon>
@@ -131,10 +131,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201612300529019_Initial.cs" />
-    <Compile Include="Migrations\201612300529019_Initial.Designer.cs">
-      <DependentUpon>201612300529019_Initial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\HumanBase.cs" />
@@ -146,7 +142,6 @@
     <Compile Include="Models\HWHBase.cs" />
     <Compile Include="HWHContext.cs" />
     <Compile Include="Models\Payment.cs" />
-    <Compile Include="Models\LoadOfWater.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\WaterTruck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -162,11 +157,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201612300529019_Initial.resx">
-      <DependentUpon>201612300529019_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701040606445_TruckUpdate.resx">
-      <DependentUpon>201701040606445_TruckUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701160345162_Init.resx">
+      <DependentUpon>201701160345162_Init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

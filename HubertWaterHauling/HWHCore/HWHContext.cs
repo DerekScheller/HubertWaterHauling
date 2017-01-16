@@ -17,12 +17,12 @@ namespace HWHCore
         public virtual DbSet<GasReciept> GasReciepts { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
-        }
+//        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+//        {
+//            base.OnModelCreating(modelBuilder);
+//
+//            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+//            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+//        }
     }
 }

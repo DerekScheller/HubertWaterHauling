@@ -12,8 +12,12 @@ namespace HWHCore.Models
         public string Zip { get; set; }
         public string Country { get; set; }
         public AddressType AddressType { get; set; }
-        public CustEmp CustEmpDistinction { get; set; }
-        public int ContactId { get; set; }
+        public int? CustomerId { get; set; }
+        public int? EmployeeId { get; set; }
+        [ForeignKey(nameof(EmployeeId))]
+        public Employee Employee { get; set; }
+        [ForeignKey(nameof(CustomerId))]
+        public Customer Customer { get; set; }
     }
 
     public enum AddressType

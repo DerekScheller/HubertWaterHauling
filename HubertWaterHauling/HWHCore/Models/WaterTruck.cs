@@ -12,6 +12,6 @@ namespace HWHCore.Models
         public string Make { get; set; }
         public int LoadVolume { get; set; }
         public virtual List<GasReciept> GasReciepts { get; set; }
-
+        public virtual List<Bill> Bills { get; set; }
     }
 }
