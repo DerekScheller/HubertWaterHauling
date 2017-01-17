@@ -84,10 +84,22 @@
     <Compile Include="CreatePayment.xaml.cs">
       <DependentUpon>CreatePayment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\QuickSearchSelect.xaml.cs">
+      <DependentUpon>QuickSearchSelect.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201701160345162_Init.cs" />
     <Compile Include="Migrations\201701160345162_Init.Designer.cs">
       <DependentUpon>201701160345162_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701170413544_NoBillNeeded.cs" />
+    <Compile Include="Migrations\201701170413544_NoBillNeeded.Designer.cs">
+      <DependentUpon>201701170413544_NoBillNeeded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701170619549_SelectionStrings.cs" />
+    <Compile Include="Migrations\201701170619549_SelectionStrings.Designer.cs">
+      <DependentUpon>201701170619549_SelectionStrings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ISearchable.cs" />
     <Compile Include="ReportsLanding.xaml.cs">
       <DependentUpon>ReportsLanding.xaml</DependentUpon>
     </Compile>
@@ -104,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreatePayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\QuickSearchSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,7 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\HumanBase.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\GasReciept.cs" />
@@ -159,6 +174,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201701160345162_Init.resx">
       <DependentUpon>201701160345162_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701170413544_NoBillNeeded.resx">
+      <DependentUpon>201701170413544_NoBillNeeded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701170619549_SelectionStrings.resx">
+      <DependentUpon>201701170619549_SelectionStrings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

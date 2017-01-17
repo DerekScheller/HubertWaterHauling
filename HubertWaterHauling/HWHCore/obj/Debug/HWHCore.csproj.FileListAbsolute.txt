@@ -30,3 +30,8 @@ C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWa
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.exe
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.pdb
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.Init.resources
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.csprojResolveAssemblyReference.cache
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.NoBillNeeded.resources
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CustomControls\QuickSearchSelect.g.cs
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CustomControls\QuickSearchSelect.baml
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.SelectionStrings.resources

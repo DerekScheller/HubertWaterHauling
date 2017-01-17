@@ -3,7 +3,7 @@
 
 namespace HWHCore.Models
 {
-    public class Customer : HumanBase
+    public class Customer : HumanBase, ISearchable
     {
         public virtual List<Payment> Payments { get; set; }
         public virtual List<Sale> Sales { get; set; }
