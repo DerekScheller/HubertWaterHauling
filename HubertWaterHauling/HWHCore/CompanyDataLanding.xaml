@@ -3,22 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HWHCore"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d"
         Title="CompanyDataLanding" Height="300" Width="600">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="193*"/>
-        </Grid.ColumnDefinitions>
-        <TabControl x:Name="CompanyDataTabs" HorizontalAlignment="Left" Height="270" VerticalAlignment="Top" Width="594" Margin="0,0,-0.4,0" Grid.ColumnSpan="2">
+        <TabControl x:Name="CompanyDataTabs" HorizontalAlignment="Left" Height="270" VerticalAlignment="Top" Width="594" Margin="0,0,-0.4,0">
             <TabItem Header="Employees">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="134*"/>
-                    </Grid.ColumnDefinitions>
-                    <ListBox x:Name="CurrentDrivers" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="208" VerticalAlignment="Top" Width="157" Margin="0,34,0,0"/>
+                    <ListBox x:Name="CurrentDrivers" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="208" VerticalAlignment="Top" Width="157" Margin="0,34,0,0" SelectedItem ="{Binding SelectedDriver}" ItemsSource="{Binding Drivers}" SelectionChanged="CurrentDrivers_SelectionChanged"/>
                     <Label x:Name="CurrentLabel" Content="Current Drivers" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="157" Grid.ColumnSpan="2"
                            Grid.Column="0" />
                     <TabControl x:Name="EmployeeFields" Grid.Column="1" HorizontalAlignment="Left" Height="242" Margin="105,0,0,0" VerticalAlignment="Top" Width="431">
@@ -28,72 +20,67 @@
                                     <ColumnDefinition Width="0*"/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="EmpFirstName" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"/>
-                                <TextBox x:Name="EmpLastName" HorizontalAlignment="Left" Height="23" Margin="10,49,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"
+                                <TextBox x:Name="EmpFirstName" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding SelectedDriver.FirstName}" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"/>
+                                <TextBox x:Name="EmpLastName" HorizontalAlignment="Left" Height="23" Margin="10,49,0,0" TextWrapping="Wrap" Text="{Binding SelectedDriver.LastName}" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"
                                          Grid.Column="0" />
-                                <TextBox x:Name="EmpMiddleInitial" HorizontalAlignment="Left" Height="23" Margin="10,91,0,0" TextWrapping="Wrap" Text="Middle Initial" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"
+                                <TextBox x:Name="EmpMiddleInitial" HorizontalAlignment="Left" Height="23" Margin="10,91,0,0" TextWrapping="Wrap" Text="{Binding SelectedDriver.MiddleInitial}" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"
                                          Grid.Column="0" />
-                                <TextBox x:Name="EmpTitle" HorizontalAlignment="Left" Height="25" Margin="10,129,0,0" TextWrapping="Wrap" Text="Employee Title" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"
+                                <TextBox x:Name="EmpTitle" HorizontalAlignment="Left" Height="25" Margin="10,129,0,0" TextWrapping="Wrap" Text="{Binding SelectedDriver.Title}" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"
                                          Grid.Column="0" />
-                                <TextBox x:Name="EmpNotes" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Left" Height="160" Margin="177,10,0,0" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Top" Width="220"/>
-                                <Button x:Name="SaveEmployeeBase" Grid.ColumnSpan="2" Grid.Column="0" Content="SAVE" HorizontalAlignment="Left" Margin="177,185,0,0" VerticalAlignment="Top" Width="62" Height="29" />
-                                <Button x:Name="CancelEmployeeBase" Grid.ColumnSpan="2" Grid.Column="0" Content="CANCEL" HorizontalAlignment="Left" Margin="335,185,0,0" VerticalAlignment="Top" Width="62" Height="29"/>
+                                <TextBox x:Name="EmpNotes" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Left" Height="160" Margin="177,10,0,0" TextWrapping="Wrap" Text="{Binding SelectedDriver.Notes}" VerticalAlignment="Top" Width="220"/>
+                                <Button x:Name="EditEmployeeBase" Grid.ColumnSpan="2" Grid.Column="0" Content="Edit" HorizontalAlignment="Left" Margin="177,185,0,0" VerticalAlignment="Top" Width="62" Height="29" />
                                 <DatePicker x:Name="HiredDate" Grid.ColumnSpan="2" Grid.Column="0"
-                                            HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Height="26" Width="152"/>
+                                            HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Height="26" Width="152" Text="{Binding SelectedDriver.HireDate}"/>
                                 <Label x:Name="DateHired" Grid.ColumnSpan="2" Grid.Column="0" Content="Date Of Hire" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Width="152"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Employee Addresses">
                             <Grid Background="#FFE5E5E5" Margin="0,-1,-0.2,0.6">
-                                <TextBox x:Name="EmpAddress" HorizontalAlignment="Left" Height="23" Margin="132,10,0,0" TextWrapping="Wrap" Text="Address Line 1" VerticalAlignment="Top" Width="225"/>
-                                <TextBox x:Name="EmpAddress2" HorizontalAlignment="Left" Height="23" Margin="132,38,0,0" TextWrapping="Wrap" Text="Address Line 2" VerticalAlignment="Top" Width="225"/>
-                                <TextBox x:Name="EmpAddress3" HorizontalAlignment="Left" Height="23" Margin="132,66,0,0" TextWrapping="Wrap" Text="Address Line 3" VerticalAlignment="Top" Width="225"/>
-                                <TextBox x:Name="EmpCity" HorizontalAlignment="Left" Height="23" Margin="132,94,0,0" TextWrapping="Wrap" Text="City" VerticalAlignment="Top" Width="120"/>
-                                <TextBox x:Name="EmpState" HorizontalAlignment="Left" Height="23" Margin="132,122,0,0" TextWrapping="Wrap" Text="State" VerticalAlignment="Top" Width="120"/>
-                                <TextBox x:Name="EmpZip" HorizontalAlignment="Left" Height="23" Margin="132,150,0,0" TextWrapping="Wrap" Text="Zip" VerticalAlignment="Top" Width="120"/>
-                                <TextBox x:Name="EmpCountry" HorizontalAlignment="Left" Height="23" Margin="132,181,0,0" TextWrapping="Wrap" Text="Country" VerticalAlignment="Top" Width="120"/>
-                                <ListBox x:Name="EmpAddressesList" HorizontalAlignment="Left" Height="185" Margin="0,29,0,0" VerticalAlignment="Top" Width="117"/>
+                                <TextBox x:Name="EmpAddress" HorizontalAlignment="Left" Height="23" Margin="132,10,0,0" TextWrapping="Wrap" Text="{Binding SelectedAddress.AddressStreet1}" VerticalAlignment="Top" Width="225"/>
+                                <TextBox x:Name="EmpAddress2" HorizontalAlignment="Left" Height="23" Margin="132,38,0,0" TextWrapping="Wrap" Text="{Binding SelectedAddress.AddressStreet2}" VerticalAlignment="Top" Width="225"/>
+                                <TextBox x:Name="EmpAddress3" HorizontalAlignment="Left" Height="23" Margin="132,66,0,0" TextWrapping="Wrap" Text="{Binding SelectedAddress.AddressStreet3}" VerticalAlignment="Top" Width="225"/>
+                                <TextBox x:Name="EmpCity" HorizontalAlignment="Left" Height="23" Margin="132,94,0,0" TextWrapping="Wrap" Text="{Binding SelectedAddress.City}" VerticalAlignment="Top" Width="120"/>
+                                <TextBox x:Name="EmpState" HorizontalAlignment="Left" Height="23" Margin="132,122,0,0" TextWrapping="Wrap" Text="{Binding SelectedAddress.State}" VerticalAlignment="Top" Width="120"/>
+                                <TextBox x:Name="EmpZip" HorizontalAlignment="Left" Height="23" Margin="132,150,0,0" TextWrapping="Wrap" Text="{Binding SelectedAddress.Zip}" VerticalAlignment="Top" Width="120"/>
+                                <TextBox x:Name="EmpCountry" HorizontalAlignment="Left" Height="23" Margin="132,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding SelectedAddress.Country}"/>
+                                <ListBox x:Name="EmpAddressesList" HorizontalAlignment="Left" Height="185" Margin="0,29,0,0" VerticalAlignment="Top" Width="117" ItemsSource="{Binding SelectedDriver.Addresses}" SelectedItem="{Binding SelectedAddress}"/>
                                 <Label x:Name="EmpAddressLabel" Content="Employee Addresses" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Width="127"/>
-                                <Button x:Name="EmpAddressSaveButton" Content="SAVE" HorizontalAlignment="Left" Margin="273,183,0,-2" VerticalAlignment="Top" Width="75" Height="33"/>
-                                <Button x:Name="EmpAddressCancelButton" Content="CANCEL" HorizontalAlignment="Left" Margin="353,183,0,-2" VerticalAlignment="Top" Width="72" Height="33"/>
-                                <ComboBox x:Name="AddressType" HorizontalAlignment="Left" Margin="282,123,0,0" VerticalAlignment="Top" Width="120"/>
+                                <Button x:Name="EmpAddressEditButton" Content="EDIT" HorizontalAlignment="Left" Margin="307,171,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+                                <TextBox x:Name="AddressType" HorizontalAlignment="Left" Margin="282,123,0,0" VerticalAlignment="Top" Width="120" Text="{Binding SelectedAddress.AddressType}" Height="22"/>
                                 <Label x:Name="AddressTypeLabel" Content="Address Type" HorizontalAlignment="Left" Margin="282,94,0,0" VerticalAlignment="Top" Width="120"/>
                             </Grid>
                         </TabItem>
                         <TabItem Header="Employee Contact Info">
                             <Grid Background="#FFE5E5E5">
-                                <Label x:Name="EmployeeName" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Width="142"/>
-                                <ListBox x:Name="EmpContacts" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="100" Margin="0,29,0,-0.4"/>
-                                <TextBox x:Name="EmpContactDetail" HorizontalAlignment="Left" Height="25" Margin="117,109,0,0" TextWrapping="Wrap" Text="Number or Email" VerticalAlignment="Top" Width="175"/>
-                                <TextBox x:Name="EmpContactNotes" HorizontalAlignment="Left" Height="25" Margin="117,149,0,0" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Top" Width="175"/>
-                                <ComboBox x:Name="EmailOrPhoneDropDown" HorizontalAlignment="Left" Margin="117,29,0,0" VerticalAlignment="Top" Width="175" Height="25"/>
-                                <ComboBox x:Name="WhereDropDown" HorizontalAlignment="Left" Margin="117,71,0,0" VerticalAlignment="Top" Width="175"/>
+                                <Label x:Name="ContactsLabel" Content="EmployeeContacts" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Width="142"/>
+                                <ListBox x:Name="EmpContacts" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="100" Margin="0,29,0,-0.4" ItemsSource="{Binding SelectedDriver.ContactInfos}" SelectedItem="{Binding SelectedContactInfo}"/>
+                                <TextBox x:Name="EmpContactDetail" HorizontalAlignment="Left" Height="25" Margin="117,109,0,0" TextWrapping="Wrap" Text="{Binding SelectedContactInfo.ContactDetail}" VerticalAlignment="Top" Width="175"/>
+                                <TextBox x:Name="EmpContactNotes" HorizontalAlignment="Left" Height="25" Margin="117,149,0,0" TextWrapping="Wrap" Text="{Binding SelectedContactInfo.Notes}" VerticalAlignment="Top" Width="175"/>
+                                <TextBox x:Name="EmailOrPhoneDropDown" HorizontalAlignment="Left" Margin="117,29,0,0" VerticalAlignment="Top" Width="175" Height="25" Text="{Binding SelectedContactInfo.ContactInfoType}"/>
+                                <TextBox x:Name="WhereDropDown" HorizontalAlignment="Left" Margin="117,71,0,0" VerticalAlignment="Top" Width="175" Height="26" Text="{Binding SelectedContactInfo.AssociationType}"/>
                                 <Label x:Name="EmailPhoneLable" Content="Select Info Type" HorizontalAlignment="Left" Margin="298,29,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
                                 <Label x:Name="WhereLabel" Content="Select Assoc Type" HorizontalAlignment="Left" Margin="298,71,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
-                                <Button x:Name="SaveEmpCi" Content="SAVE" HorizontalAlignment="Left" Margin="317,134,0,0" VerticalAlignment="Top" Width="85" Height="30"/>
-                                <Button x:Name="CancelEmpCi" Content="CANCEL" HorizontalAlignment="Left" Margin="317,169,0,0" VerticalAlignment="Top" Width="85" Height="30"/>
+                                <Button x:Name="EditEmpCi" Content="Edit" HorizontalAlignment="Left" Margin="317,134,0,0" VerticalAlignment="Top" Width="85" Height="30"/>
                             </Grid>
                         </TabItem>
                     </TabControl>
                 </Grid>
             </TabItem>
             <TabItem Header="WaterTrucks">
-                <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="TruckSelection" HorizontalAlignment="Left" Height="208" VerticalAlignment="Top" Width="157" Margin="0,34,0,0"/>
+                <Grid Background="#FFE5E5E5" Margin="0,3,0,-2.6">
+                    <ListBox x:Name="TruckSelection" HorizontalAlignment="Left" Height="208" VerticalAlignment="Top" Width="157" Margin="0,29,0,0" ItemsSource="{Binding Trucks}" SelectedItem="{Binding SelectedTruck}"/>
                     <Label x:Name="TruckSelectLabel" Content="Select Truck" HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top" Width="157"/>
-                    <TextBox x:Name="TruckName" HorizontalAlignment="Left" Height="25" Margin="177,34,0,0" TextWrapping="Wrap" Text="Name Of Truck" VerticalAlignment="Top" Width="245"/>
-                    <TextBox x:Name="TruckModel" HorizontalAlignment="Left" Height="25" Margin="177,64,0,0" TextWrapping="Wrap" Text="Model Of Truck" VerticalAlignment="Top" Width="245"/>
-                    <TextBox x:Name="TruckLoadVolume" HorizontalAlignment="Left" Height="25" Margin="177,124,0,0" TextWrapping="Wrap" Text="Truck Max Carry Capacity" VerticalAlignment="Top" Width="245"/>
-                    <DatePicker x:Name="ManufactureYear" HorizontalAlignment="Left" Margin="177,199,0,0" VerticalAlignment="Top" Width="122"/>
-                    <DatePicker x:Name="PurchaseYear" HorizontalAlignment="Left" Margin="320,199,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="TruckName" HorizontalAlignment="Left" Height="25" Margin="177,34,0,0" TextWrapping="Wrap" Text="{Binding SelectedTruck.Name}" VerticalAlignment="Top" Width="245"/>
+                    <TextBox x:Name="TruckModel" HorizontalAlignment="Left" Height="25" Margin="177,64,0,0" TextWrapping="Wrap" Text="{Binding SelectedTruck.Model}" VerticalAlignment="Top" Width="245"/>
+                    <TextBox x:Name="TruckLoadVolume" HorizontalAlignment="Left" Height="25" Margin="177,124,0,0" TextWrapping="Wrap" Text="{Binding SelectedTruck.LoadVolume}" VerticalAlignment="Top" Width="245"/>
+                    <TextBox x:Name="ManufactureYear" HorizontalAlignment="Left" Margin="177,199,0,0" VerticalAlignment="Top" Width="122" Text="{Binding SelectedTruck.ManufactureYear}" Height="33"/>
+                    <TextBox x:Name="PurchaseYear" HorizontalAlignment="Left" Margin="320,199,0,0" VerticalAlignment="Top" Text="{Binding SelectedTruck.PurchaseDate}" Width="102" Height="33"/>
                     <Label x:Name="TruckYear" Content="Date Of Manufacture" HorizontalAlignment="Left" Margin="177,168,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="TruckPurchaseDate" Content="Date Of Purchase" HorizontalAlignment="Left" Margin="320,168,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="TruckCancel" Content="Cancel" HorizontalAlignment="Left" Margin="477,204,0,0" VerticalAlignment="Top" Width="80" Height="28"/>
-                    <Button x:Name="TruckSave" Content="SAVE" HorizontalAlignment="Left" Margin="477,166,0,0" VerticalAlignment="Top" Width="80" Height="28"/>
-                    <TextBox x:Name="TruckMake" HorizontalAlignment="Left" Height="25" Margin="177,94,0,0" TextWrapping="Wrap" Text="Make Of Truck" VerticalAlignment="Top" Width="245"/>
+                    <Button x:Name="TruckEdit" Content="Edit" HorizontalAlignment="Left" Margin="477,204,0,0" VerticalAlignment="Top" Width="80" Height="28"/>
+                    <TextBox x:Name="TruckMake" HorizontalAlignment="Left" Height="25" Margin="177,94,0,0" TextWrapping="Wrap" Text="{Binding SelectedTruck.Make}" VerticalAlignment="Top" Width="245"/>
                 </Grid>
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>

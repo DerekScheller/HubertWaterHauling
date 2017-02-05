@@ -1,14 +1,49 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HWHCore.Models
 {
-    public class GasReciept : HWHBase, ISearchable
+    public class GasReciept : HWHBase, ISearchable, INotifyPropertyChanged
     {
-        public decimal RecieptTotal { get; set; }
-        public string Notes { get; set; }
-        public DateTime DateOnReciept { get; set; }
-        
+        private decimal _recieptTotal;
+        private string _notes;
+        private DateTime _dateOnReciept;
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        public decimal RecieptTotal
+        {
+            get { return _recieptTotal; }
+            set
+            {
+                _recieptTotal = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("RecieptTotal"));
+            }
+        }
+
+        public string Notes
+        {
+            get { return _notes; }
+            set
+            {
+                _notes = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Notes"));
+                PropertyChanged(this, new PropertyChangedEventArgs("SearchString"));
+            }
+        }
+
+        public DateTime DateOnReciept
+        {
+            get { return _dateOnReciept; }
+            set
+            {
+                _dateOnReciept = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("DateOnReciept"));
+                PropertyChanged(this, new PropertyChangedEventArgs("SearchString"));
+            }
+        }
+
+        public string SearchString => $"{DriverEmployee.FirstName} {DriverEmployee.LastName} {WaterTruck.Name} {WaterTruck.ManufactureYear} {DateOnReciept} {Notes}";
 
         public int TruckId { get; set; }
         [ForeignKey(nameof(TruckId))]
@@ -21,12 +56,6 @@ namespace HWHCore.Models
         public override string ToString()
         {
             return $"{DriverEmployee.FirstName} {WaterTruck.Name} {DateOnReciept}";
-        }
-
-        public string SearchString()
-        {
-            return
-                $"{DriverEmployee.FirstName} {DriverEmployee.LastName} {WaterTruck.Name} {WaterTruck.ManufactureYear} {DateOnReciept} {Notes}";
         }
     }
 }

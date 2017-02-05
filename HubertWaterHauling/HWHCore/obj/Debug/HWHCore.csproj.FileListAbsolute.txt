@@ -9,6 +9,7 @@ C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWa
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\bin\Debug\EntityFramework.xml
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\bin\Debug\System.Data.SQLite.xml
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.csprojResolveAssemblyReference.cache
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\AccountingLanding.g.cs
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CompanyDataLanding.g.cs
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CreateNewSale.g.cs
@@ -25,13 +26,10 @@ C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWa
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\MainWindow.baml
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\ReportsLanding.baml
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.g.resources
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.Init.resources
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.NoBillNeeded.resources
+C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.SelectionStrings.resources
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Properties.Resources.resources
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.csproj.GenerateResource.Cache
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.exe
 C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.pdb
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.Init.resources
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.csprojResolveAssemblyReference.cache
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.NoBillNeeded.resources
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CustomControls\QuickSearchSelect.g.cs
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\CustomControls\QuickSearchSelect.baml
-C:\Users\Derek Scheller\Documents\Visual Studio 2015\HubertWaterHauling\HubertWaterHauling\HWHCore\obj\Debug\HWHCore.Migrations.SelectionStrings.resources

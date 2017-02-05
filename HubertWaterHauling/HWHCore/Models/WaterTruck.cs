@@ -1,27 +1,89 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace HWHCore.Models
 {
-    public class WaterTruck : HWHBase, ISearchable
+    public class WaterTruck : HWHBase, ISearchable, INotifyPropertyChanged
     {
-        public string Name { get; set; }
-        public DateTime ManufactureYear { get; set; }
-        public DateTime? PurchaseDate { get; set; }
-        public string Model { get; set; }
-        public string Make { get; set; }
-        public int LoadVolume { get; set; }
+        private string _name;
+        private DateTime _manufactureYear;
+        private DateTime? _purchaseDate;
+        private string _model;
+        private string _make;
+        private int _loadVolume;
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+                PropertyChanged(this, new PropertyChangedEventArgs("SearchString"));
+            }
+        }
+
+        public DateTime ManufactureYear
+        {
+            get { return _manufactureYear; }
+            set
+            {
+                _manufactureYear = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("ManufactureYear"));
+                PropertyChanged(this, new PropertyChangedEventArgs("SearchString"));
+            }
+        }
+
+        public DateTime? PurchaseDate
+        {
+            get { return _purchaseDate; }
+            set
+            {
+                _purchaseDate = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("PurchaseDate"));
+            }
+        }
+
+        public string Model
+        {
+            get { return _model; }
+            set
+            {
+                _model = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Model"));
+                PropertyChanged(this, new PropertyChangedEventArgs("SearchString"));
+            }
+        }
+
+        public string Make
+        {
+            get { return _make; }
+            set
+            {
+                _make = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Make"));
+                PropertyChanged(this, new PropertyChangedEventArgs("SearchString"));
+            }
+        }
+
+        public int LoadVolume
+        {
+            get { return _loadVolume; }
+            set
+            {
+                _loadVolume = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("LoadVolume"));
+            }
+        }
+
         public virtual List<GasReciept> GasReciepts { get; set; }
         public virtual List<Sale> Sales { get; set; }
-
+        public string SearchString => $"{Name} {Model} {Make} {ManufactureYear}";
         public override string ToString()
         {
             return $"{Name} {Model} {Make}";
-        }
-
-        public string SearchString()
-        {
-            return $"{Name} {Model} {Make} {ManufactureYear}";
         }
     }
 }

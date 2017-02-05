@@ -84,9 +84,6 @@
     <Compile Include="CreatePayment.xaml.cs">
       <DependentUpon>CreatePayment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\QuickSearchSelect.xaml.cs">
-      <DependentUpon>QuickSearchSelect.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201701160345162_Init.cs" />
     <Compile Include="Migrations\201701160345162_Init.Designer.cs">
       <DependentUpon>201701160345162_Init.cs</DependentUpon>
@@ -119,10 +116,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomControls\QuickSearchSelect.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\HumanBase.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\GasReciept.cs" />
     <Compile Include="Models\ContactInfo.cs" />
